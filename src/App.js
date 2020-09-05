@@ -1,16 +1,16 @@
 import React, { useContext, useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-// import Header from "./Components/Header";
+import Header from "./Components/Header";
 import Home from "./Components/Home";
-// import Volunteer from "./Components/Volunteer";
+import Volunteer from "./Components/Volunteer";
 // import Login from "./Components/Login";
 // import List from "./Components/List";
 // import HelpedList from "./Components/helpedlist";
 // import Profile from "./Components/Profile";
-// import Locate from "./Components/Locate";
-// import NotFound from "./Components/NotFound";
+import Locate from "./Components/Locate";
+import NotFound from "./Components/NotFound";
 // import Nearme from "./Components/Nearme";
-// import Footer from "./Components/Footer";
+import Footer from "./Components/Footer";
 import firebase from "./firebase/base";
 // import { lastDayOfDecade } from "date-fns";
 
@@ -33,22 +33,22 @@ function App() {
           <Home />
         </Route>
 
-        {/* <Route path="/volunteer">
+        <Route path="/volunteer">
           <Volunteer />
         </Route>
-        <Route path="/login">
+        {/* <Route path="/login">
           <Login />
-        </Route>
+        </Route> */}
 
-        <Route path="/profile">
+        {/* <Route path="/profile">
           <Profile />
-        </Route>
+        </Route> */}
 
         <Route path="/locate">
           <Locate />
         </Route>
 
-        <Route path="/nearme">
+        {/* <Route path="/nearme">
           <Nearme />
         </Route>
 
@@ -58,11 +58,11 @@ function App() {
 
         <Route path="/helpedlist">
           <HelpedList />
-        </Route>
+        </Route> */}
 
         <Route path="*">
           <NotFound />
-        </Route> */}
+        </Route>
       </Switch>
     </BrowserRouter>
     // ) : (
