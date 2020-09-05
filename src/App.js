@@ -5,15 +5,15 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Volunteer from "./Components/Volunteer";
 import Login from "./Components/Login";
-import List from "./Components/List";
-import HelpedList from "./Components/helpedlist";
+// import List from "./Components/List";
+// import HelpedList from "./Components/helpedlist";
 import Profile from "./Components/Profile";
 import Locate from "./Components/Locate";
 import NotFound from "./Components/NotFound";
-import Nearme from "./Components/Nearme";
+// import Nearme from "./Components/Nearme";
 import Footer from "./Components/Footer";
 import firebase from "./firebase/base";
-import { lastDayOfDecade } from "date-fns";
+// import { lastDayOfDecade } from "date-fns";
 
 function App() {
   // const { currentUser } = useContext(AuthContext);
@@ -48,7 +48,7 @@ function App() {
           <Locate />
         </Route>
 
-        <Route path="/nearme">
+        {/* <Route path="/nearme">
           <Nearme />
         </Route>
 
@@ -58,7 +58,7 @@ function App() {
 
         <Route path="/helpedlist">
           <HelpedList />
-        </Route>
+        </Route> */}
 
         <Route path="*">
           <NotFound />

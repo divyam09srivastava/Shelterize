@@ -5,6 +5,12 @@ import firebase from "../firebase/base";
 import { withRouter } from "react-router-dom";
 import Fade from "react-reveal/Fade";
 
+import Geocode from "react-geocode";
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
+
 const Volunteer = ({ history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -91,6 +97,15 @@ const Volunteer = ({ history }) => {
     }
   }
 
+  const handleSelect = async (value) => {
+    const results = await geocodeByAddress(value);
+    const latLng = await getLatLng(results[0]);
+    setAddress(value);
+    setlat(latLng.lat);
+    setlong(latLng.lng);
+    console.log(latLng);
+  };
+
   function sendFeedback(templateId, variables) {
     window.emailjs
       .send("service_3e25s0a", templateId, variables)
@@ -107,6 +122,8 @@ const Volunteer = ({ history }) => {
   }
 
   function Locate() {
+    Geocode.setApiKey("AIzaSyCj8AF7m9QXW0untu-KF-DZA2oCjXK7NHM");
+    Geocode.setLanguage("en");
     return (
       <button
         onClick={() => {
@@ -114,6 +131,20 @@ const Volunteer = ({ history }) => {
             (position) => {
               console.log(
                 position.coords.latitude + "  " + position.coords.longitude
+              );
+
+              Geocode.fromLatLng(
+                position.coords.latitude,
+                position.coords.longitude
+              ).then(
+                (response) => {
+                  const address1 = response.results[0].formatted_address;
+                  setAddress(address1);
+                  console.log(address1);
+                },
+                (error) => {
+                  console.error(error);
+                }
               );
               setlat(position.coords.latitude);
               setlong(position.coords.longitude);
@@ -218,8 +249,9 @@ const Volunteer = ({ history }) => {
               <br />
               <hr />
               <div className="form-group">
+                {/* <AutoSearch /> */}
                 <label for="Address">Address</label>
-                <input
+                {/* <input
                   type="text"
                   className="form-control mb-20"
                   placeholder="Your Address"
@@ -228,7 +260,50 @@ const Volunteer = ({ history }) => {
                   onChange={(e) => {
                     setAddress(e.target.value);
                   }}
-                />
+                /> */}
+                <PlacesAutocomplete
+                  value={address}
+                  onChange={setAddress}
+                  onSelect={handleSelect}
+                >
+                  {({
+                    getInputProps,
+                    suggestions,
+                    getSuggestionItemProps,
+                    loading,
+                  }) => (
+                    <div>
+                      {/* <p>Latitude: {coordinates.lat}</p>
+            <p>Longitude: {coordinates.lng}</p> */}
+
+                      <input
+                        type="text"
+                        className="form-control mb-20"
+                        {...getInputProps({ placeholder: "Type address" })}
+                      />
+
+                      <div>
+                        {loading ? <div>...loading</div> : null}
+
+                        {suggestions.map((suggestion) => {
+                          const style = {
+                            backgroundColor: suggestion.active
+                              ? "#41b6e6"
+                              : "#fff",
+                          };
+
+                          return (
+                            <div
+                              {...getSuggestionItemProps(suggestion, { style })}
+                            >
+                              {suggestion.description}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+                </PlacesAutocomplete>
                 <Locate />
               </div>
               <div class="form-row">
