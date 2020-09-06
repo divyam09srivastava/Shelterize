@@ -10,7 +10,7 @@ import HelpedList from "./Components/HelpedList";
 import Profile from "./Components/Profile";
 import Locate from "./Components/Locate";
 import NotFound from "./Components/NotFound";
-// import Nearme from "./Components/Nearme";
+import Nearme from "./Components/Nearme";
 import Footer from "./Components/Footer";
 import firebase from "./firebase/base";
 // import { lastDayOfDecade } from "date-fns";
@@ -48,9 +48,9 @@ function App() {
           <Locate />
         </Route>
 
-        {/* <Route path="/nearme">
+        <Route path="/nearme">
           <Nearme />
-        </Route> */}
+        </Route>
 
         <Route path="/list">
           <List />
