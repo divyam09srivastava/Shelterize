@@ -27,7 +27,7 @@ const center = {
 
 const Profile = ({ history }) => {
   const { isLoaded, loadError } = useLoadScript({
-    googleMapsApiKey: "AIzaSyBCO7fqvr8Uzl-GSJgZDA4Lzb1nrw6Yx7o",
+    googleMapsApiKey: "AIzaSyCj8AF7m9QXW0untu-KF-DZA2oCjXK7NHM",
     libraries,
   });
   const currUser = firebase.getCurrentUsername();
