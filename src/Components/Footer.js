@@ -16,31 +16,75 @@ const Footer = () => {
               </p>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6"></div>
+
+          {/* <div class="col-lg-4 col-md-4">
+            <div class="single-footer-widget">
+              <ul>
+                <h6>Team Members</h6>
+
+                <li>
+                  <h4 style={{ color: "white" }}>Tanya Pandhi</h4>
+                </li>
+                <li>
+                  <h4 style={{ color: "white" }}>Teghdeep Kapoor</h4>
+                </li>
+              </ul>
+            </div>
+          </div> */}
+
           <div class="col-lg-4  col-md-6">
             <div class="single-footer-widget mail-chimp">
               <h6 class="mb-20">Contact Us</h6>
               <ul class="list-contact">
                 <li class="flex-row d-flex">
-                  <div class="icon">
+                  {/* <div class="icon">
                     <span class="lnr lnr-home"></span>
-                  </div>
+                  </div> */}
                   <div class="detail">
-                    <h4>Delhi,India</h4>
+                    <h4>Tanya Pandhi</h4>
 
+                    <p>
+                      <div class="icon">
+                        <span class="lnr lnr-pointer-right"></span>
+                        <a href="https://github.com/tpandhi">Github</a>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="icon">
+                        <span class="lnr lnr-pointer-right"></span>
+                        <a href="https://www.linkedin.com/in/tanya-pandhi-ba89481b3/">
+                          Linkedin
+                        </a>
+                      </div>
+                    </p>
                     <p></p>
                   </div>
                 </li>
                 <li class="flex-row d-flex">
-                  <div class="icon">
+                  {/* <div class="icon">
                     <span class="lnr lnr-phone-handset"></span>
-                  </div>
+                  </div> */}
                   <div class="detail">
-                    <h4>+91 xxxxxxxxx</h4>
-                    <p>Mon to Fri 9am to 6 pm</p>
+                    <h4>Teghdeep Kapoor</h4>
+                    {/* <p>Mon to Fri 9am to 6 pm</p> */}
+                    <p>
+                      <div class="icon">
+                        <span class="lnr lnr-pointer-right"></span>
+                        <a href="https://github.com/teghdeep">Github</a>
+                      </div>
+                    </p>
+                    <p>
+                      <div class="icon">
+                        <span class="lnr lnr-pointer-right"></span>
+
+                        <a href="https://www.linkedin.com/in/teghdeep-kapoor-8ab2961aa/">
+                          Linkedin
+                        </a>
+                      </div>
+                    </p>
                   </div>
                 </li>
-                <li class="flex-row d-flex">
+                {/* <li class="flex-row d-flex">
                   <div class="icon">
                     <span class="lnr lnr-envelope"></span>
                   </div>
@@ -48,7 +92,7 @@ const Footer = () => {
                     <h4>support@shelterize.com</h4>
                     <p>Send us your query anytime!</p>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
