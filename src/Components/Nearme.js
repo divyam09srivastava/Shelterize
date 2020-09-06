@@ -129,7 +129,7 @@ export default function App() {
   }, []);
 
   const panTo = React.useCallback(({ lat, lng }) => {
-    mapRef.current.setZoom(13);
+    mapRef.current.setZoom(16);
     mapRef.current.panTo({ lat, lng });
   }, []);
 
@@ -155,7 +155,7 @@ export default function App() {
       <GoogleMap
         id="map"
         mapContainerStyle={mapContainerStyle}
-        zoom={12}
+        zoom={15}
         center={{ lat: curlocation.lat, lng: curlocation.lng }}
         options={options}
         // onClick={onMapClick}
