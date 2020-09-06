@@ -6,7 +6,7 @@ import Home from "./Components/Home";
 import Volunteer from "./Components/Volunteer";
 import Login from "./Components/Login";
 import List from "./Components/List";
-// import HelpedList from "./Components/helpedlist";
+import HelpedList from "./Components/HelpedList";
 import Profile from "./Components/Profile";
 import Locate from "./Components/Locate";
 import NotFound from "./Components/NotFound";
@@ -55,10 +55,10 @@ function App() {
         <Route path="/list">
           <List />
         </Route>
-        {/* 
+
         <Route path="/helpedlist">
           <HelpedList />
-        </Route> */}
+        </Route>
 
         <Route path="*">
           <NotFound />
