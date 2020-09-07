@@ -1,6 +1,9 @@
 # Shelterize
 This Web Application aims at providing shelter to the victims hit by natural calamities.
 
+# Demo
+https://shelterize-7b1a3.web.app/
+
 # Team Members
 1. Tanya Pandhi
 2. Teghdeep Kapoor
