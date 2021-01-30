@@ -1,5 +1,6 @@
 # Shelterize
-This Web Application aims at providing shelter to the victims hit by natural calamities.
+This is an award winning (DefHacks) Web Application that aims at providing shelter to the victims hit by natural calamities.
+ 
 
 # Demo
 https://shelterize-7b1a3.web.app/
