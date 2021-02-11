@@ -17,10 +17,10 @@ const Home = () => {
               <p className="text-white sub-head">
                 We will help you locate shelters near you.
               </p>
-              <div className="row justify-content-between">
+              <div className="row justify-content-between"  >
                 <a
                   href="/locate"
-                  className="col-10 col-md-3 primary-btn header-btn text-uppercase offset-1 mb-1"
+                  className="col-10 col-md-3 primary-btn header-btn text-uppercase offset-1 mb-1" 
                 >
                   Need Help
                 </a>
@@ -112,7 +112,7 @@ const Home = () => {
               <div className="single-process">
                 <span className="lnr lnr-magic-wand"></span>
                 <a href="#">
-                  <h4>Congratulations</h4>
+                  <h4>Congratulations !!!</h4>
                 </a>
                 <p>Successfuly provided shelter to many people in need.</p>
               </div>

@@ -1,3 +1,4 @@
+import { findByLabelText } from "@testing-library/react";
 import React from "react";
 
 const Footer = () => {
@@ -42,21 +43,20 @@ const Footer = () => {
                   </div> */}
                   <div class="detail">
                     <h4>Tanya Pandhi</h4>
-
+                    <div style={{display:"flex"}}>
                     <p>
                       <div class="icon">
                         <span class="lnr lnr-pointer-right"></span>
-                        <a href="https://github.com/tpandhi">Github</a>
+                        <a href="https://github.com/tpandhi">  Github</a>
                       </div>
                     </p>
                     <p>
                       <div class="icon">
                         <span class="lnr lnr-pointer-right"></span>
-                        <a href="https://www.linkedin.com/in/tanya-pandhi-ba89481b3/">
-                          Linkedin
-                        </a>
+                        <a href="https://www.linkedin.com/in/tanya-pandhi-ba89481b3/">  Linkedin</a>
                       </div>
                     </p>
+                    </div>
                     <p></p>
                   </div>
                 </li>
@@ -67,21 +67,21 @@ const Footer = () => {
                   <div class="detail">
                     <h4>Teghdeep Kapoor</h4>
                     {/* <p>Mon to Fri 9am to 6 pm</p> */}
+                    <div style={{display:"flex"}}>
                     <p>
                       <div class="icon">
                         <span class="lnr lnr-pointer-right"></span>
-                        <a href="https://github.com/teghdeep">Github</a>
+                        <a href="https://github.com/teghdeep">  Github</a>
                       </div>
                     </p>
                     <p>
                       <div class="icon">
                         <span class="lnr lnr-pointer-right"></span>
 
-                        <a href="https://www.linkedin.com/in/teghdeep-kapoor-8ab2961aa/">
-                          Linkedin
-                        </a>
+                        <a href="https://www.linkedin.com/in/teghdeep-kapoor-8ab2961aa/">  Linkedin</a>
                       </div>
                     </p>
+                    </div>
                   </div>
                 </li>
                 {/* <li class="flex-row d-flex">
